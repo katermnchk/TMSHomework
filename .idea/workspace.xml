@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="697e6977-2c6c-4ba7-998b-5035903554d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TMSHomework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Task1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Task2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Task3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Task4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Task5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TaskSpecial.java" afterDir="false" />
-    </list>
+    <list default="true" id="697e6977-2c6c-4ba7-998b-5035903554d2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "katermnchk"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/katermnchk/TMSHomework.git",
+    "accountId": "150b1972-b76c-49d6-af30-bf8bf31e190d"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
