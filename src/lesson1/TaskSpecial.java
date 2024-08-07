@@ -1,3 +1,5 @@
+package lesson1;
+
 public class TaskSpecial {
     public static void main(String[] args) {
         //method 1
