@@ -1,3 +1,4 @@
+package lesson1;
 public class Task3 {
     public static void main(String[] args){
         int n = 126, first, mid, end;
