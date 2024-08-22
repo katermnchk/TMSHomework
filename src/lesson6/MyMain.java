@@ -18,8 +18,7 @@ public class MyMain {
         testFirstTask(firstCard, secondCard, thirdCard);
     }
 
-    public static void testFirstTask(
-            CreditCard firstCard, CreditCard secondCard, CreditCard thirdCard) {
+    public static void testFirstTask(CreditCard firstCard, CreditCard secondCard, CreditCard thirdCard) {
         firstCard.addCredit(450);
         secondCard.addCredit(360);
         thirdCard.withdrawMoney(700);
@@ -29,18 +28,15 @@ public class MyMain {
     }
 
     public static void testATM() {
-        ATM testingATM = new ATM(
-                20, 13, 9
-        );
+        ATM testingATM = new ATM(20, 13, 9);
         int withdrawnMoney;
         do {
-        System.out.print("Please enter amount of money " +
-                "you want to withdraw or -1 to exit: ");
+        System.out.print("Please enter amount of money you want to withdraw or -1 to exit: ");
         withdrawnMoney = getScanner().nextInt();
         if (withdrawnMoney == -1) {
             System.out.println("You have entered -1. Goodbye!");
         }
-        else{
+        else {
             testingATM.withdrawMoney(withdrawnMoney);
             System.out.println("-----------------------------");
         }
@@ -50,5 +46,4 @@ public class MyMain {
     public static Scanner getScanner(){
         return new Scanner(System.in);
     }
-
 }

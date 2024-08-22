@@ -11,8 +11,7 @@ public class CreditCard {
 
     void addCredit(int credit){
         amountOfMoney += credit;
-        System.out.println("You have put " + credit +
-        " BYN on the card with the number: " + this.accountNumber);
+        System.out.println("You have put " + credit + " BYN on the card with the number: " + this.accountNumber);
     }
 
     void withdrawMoney(int withdrawnMoney){
@@ -20,7 +19,7 @@ public class CreditCard {
             System.out.println("There is not enough money on the card");
         else {
             System.out.println("You have withdrawn " + withdrawnMoney +
-            " BYN from the card with the number: " + this.accountNumber);
+                    " BYN from the card with the number: " + this.accountNumber);
             amountOfMoney -= withdrawnMoney;
         }
     }
