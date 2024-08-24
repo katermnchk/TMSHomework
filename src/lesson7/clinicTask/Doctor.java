@@ -3,8 +3,8 @@ package lesson7.clinicTask;
 import java.util.Scanner;
 
 public class Doctor {
-    private String doctorType;
-    private String name;
+    private final String doctorType;
+    private final String name;
 
     Doctor(String doctorType, String name){
         this.doctorType = doctorType;

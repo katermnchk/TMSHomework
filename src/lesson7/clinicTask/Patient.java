@@ -1,7 +1,7 @@
 package lesson7.clinicTask;
 
 public class Patient {
-    private String name;
+    private final String name;
     private int treatmentPlan;
     private Doctor doctor;
 

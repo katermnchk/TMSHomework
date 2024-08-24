@@ -5,8 +5,8 @@ import lesson7.clinicTask.*;
 
 public class MyMain {
     public static void main(String[] args) {
-        //createClinic();
-        changeAppleColor();
+        //createClinic(); //Task1
+        changeAppleColor(); //Task2
     }
 
     public static void createClinic(){

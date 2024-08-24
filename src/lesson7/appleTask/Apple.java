@@ -1,7 +1,7 @@
 package lesson7.appleTask;
 
 public class Apple {
-    private String color;
+    private final String color;
 
     public Apple(String color) {
         this.color = color;
