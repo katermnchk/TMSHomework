@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697e6977-2c6c-4ba7-998b-5035903554d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lesson7/appleTask/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson7/clinic/Clinic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/MyMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson7/clinic/Dentist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/clinicTask/Dentist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson7/clinic/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/clinicTask/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson7/clinic/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/clinicTask/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson7/clinic/Surgeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/clinicTask/Surgeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson7/clinic/Therapist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/clinicTask/Therapist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/MyMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/MyMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -5,8 +5,8 @@ import lesson7.clinicTask.*;
 
 public class MyMain {
     public static void main(String[] args) {
-        createClinic();
-        //changeAppleColor();
+        //createClinic();
+        changeAppleColor();
     }
 
     public static void createClinic(){
@@ -24,6 +24,9 @@ public class MyMain {
 
     public static void changeAppleColor(){
         Apple apple = new Apple("green");
+        System.out.println("Initial apple color: " + apple.getColor());
+        apple = new Apple("red");
+        System.out.println("New apple color: " + apple.getColor());
     }
 
 }
