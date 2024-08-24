@@ -1,0 +1,42 @@
+Index: src/lesson7/Animals.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lesson7;\r\n\r\npublic class Animals {\r\n    private String animalType;\r\n    private String animalColor;\r\n    private String animalName;\r\n    private int animalAge;\r\n    private int animalWeight;\r\n\r\n    Animals(String animalType, String animalColor, String animalName, int animalAge, int animalWeight){\r\n        this.animalType = animalType;\r\n        this.animalColor = animalColor;\r\n        this.animalName = animalName;\r\n        this.animalAge = animalAge;\r\n        this.animalWeight = animalWeight;\r\n    }\r\n\r\n    void sounds(){\r\n        System.out.println(\"No sound set...\");\r\n    }\r\n\r\n    void runs(){\r\n        System.out.println(\"Does not RUN!\");\r\n    }\r\n\r\n    String getAnimalFullInformation(){\r\n        return \"Animal type: \" + this.animalType + \"\\n\" +\r\n                \"Animal color: \" + this.animalColor + \"\\n\" +\r\n                \"Animal name: \" + this.animalName + \"\\n\" +\r\n                \"Animal age: \" + this.animalAge + \"\\n\" +\r\n                \"Animal weight: \" + this.animalWeight;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/lesson7/Animals.java b/src/lesson7/Animals.java
+--- a/src/lesson7/Animals.java	(revision 8f234eac81bc3f9fac8342c00efa14fc640ef989)
++++ b/src/lesson7/Animals.java	(date 1724311345905)
+@@ -1,33 +1,0 @@
+-package lesson7;
+-
+-public class Animals {
+-    private String animalType;
+-    private String animalColor;
+-    private String animalName;
+-    private int animalAge;
+-    private int animalWeight;
+-
+-    Animals(String animalType, String animalColor, String animalName, int animalAge, int animalWeight){
+-        this.animalType = animalType;
+-        this.animalColor = animalColor;
+-        this.animalName = animalName;
+-        this.animalAge = animalAge;
+-        this.animalWeight = animalWeight;
+-    }
+-
+-    void sounds(){
+-        System.out.println("No sound set...");
+-    }
+-
+-    void runs(){
+-        System.out.println("Does not RUN!");
+-    }
+-
+-    String getAnimalFullInformation(){
+-        return "Animal type: " + this.animalType + "\n" +
+-                "Animal color: " + this.animalColor + "\n" +
+-                "Animal name: " + this.animalName + "\n" +
+-                "Animal age: " + this.animalAge + "\n" +
+-                "Animal weight: " + this.animalWeight;
+-    }
+-}
