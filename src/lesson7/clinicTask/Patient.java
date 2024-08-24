@@ -1,11 +1,11 @@
-package lesson7.clinic;
+package lesson7.clinicTask;
 
 public class Patient {
     private String name;
     private int treatmentPlan;
     private Doctor doctor;
 
-    Patient(String name){
+    public Patient(String name){
         this.name = name;
     }
 
@@ -18,7 +18,7 @@ public class Patient {
         return doctor;
     }
 
-    String getName(){
+    public String getName(){
         return "patient name: " + name;
     }
 

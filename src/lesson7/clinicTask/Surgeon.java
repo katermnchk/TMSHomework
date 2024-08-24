@@ -1,7 +1,7 @@
-package lesson7.clinic;
+package lesson7.clinicTask;
 
 public class Surgeon extends Doctor {
-    Surgeon(String doctorType, String name) {
+    public Surgeon(String doctorType, String name) {
         super(doctorType, name);
     }
 

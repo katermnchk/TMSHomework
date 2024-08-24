@@ -1,8 +1,12 @@
-package lesson7.clinic;
+package lesson7;
 
-public class Clinic {
+import lesson7.appleTask.Apple;
+import lesson7.clinicTask.*;
+
+public class MyMain {
     public static void main(String[] args) {
         createClinic();
+        //changeAppleColor();
     }
 
     public static void createClinic(){
@@ -16,6 +20,10 @@ public class Clinic {
         System.out.println("-------------------------------");
         System.out.println(patient.getDoctor().getFullInfo());
         System.out.println(patient.getName());
+    }
+
+    public static void changeAppleColor(){
+        Apple apple = new Apple("green");
     }
 
 }

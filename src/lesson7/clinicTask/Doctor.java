@@ -1,4 +1,4 @@
-package lesson7.clinic;
+package lesson7.clinicTask;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class Doctor {
         System.out.println("The treatment method is still unknown...");
     }
 
-    String getFullInfo(){
+    public String getFullInfo(){
         return "doctor type: " + doctorType + "\n" + "doctor name: " + name;
     }
 
