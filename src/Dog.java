@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Dog extends Animal {
-    public Dog(String animalType, String animalName, int animalAge, String animalColor) {
+    private Dog(String animalType, String animalName, int animalAge, String animalColor) {
         super(animalType, animalName, animalAge, animalColor);
     }
 
@@ -21,5 +21,9 @@ public class Dog extends Animal {
         else {
             System.out.println("The dog doesn't like this :(");
         }
+    }
+
+    public static Dog createDog(String animalType, String animalName, int animalAge, String animalColor) {
+        return new Dog(animalType, animalName, animalAge, animalColor);
     }
 }

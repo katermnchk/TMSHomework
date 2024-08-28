@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697e6977-2c6c-4ba7-998b-5035903554d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rabbit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tiger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/TaskSpecial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,24 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MyMain.executor": "Run",
-    "Application.Task1.executor": "Run",
-    "Application.Task2.executor": "Run",
-    "Application.Task3.executor": "Run",
-    "Application.Task4.executor": "Run",
-    "Application.Task6.executor": "Run",
-    "Application.TaskSpecial.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "lesson8",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MyMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TaskSpecial.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lesson8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />

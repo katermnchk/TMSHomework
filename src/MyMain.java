@@ -1,7 +1,7 @@
 public class MyMain {
     public static void main(String[] args) {
         Animal[] animals = new Animal[]{
-                new Dog("dog", "Tosya", 3, "brown"),
+                Dog.createDog("dog", "Tosya", 7, "brown"),
                 new Tiger("tiger", "Vasya", 5, "yellow"),
                 new Rabbit("rabbit", "Fedor", 1, "white")
         };
@@ -18,12 +18,10 @@ public class MyMain {
     }
 
     public static void listenToTheAnimals(Animal[] animals){
-        System.out.print("The " + animals[0].getAnimalType() + " says: ");
-        animals[0].voice();
-        System.out.print("The " + animals[1].getAnimalType() + " says: ");
-        animals[1].voice();
-        System.out.print("The " + animals[2].getAnimalType() + " says: ");
-        animals[2].voice();
+        for (Animal animal : animals) {
+            System.out.print("The " + animal.getAnimalType() + " says: ");
+            animal.voice();
+        }
         System.out.println("---------------------------------");
     }
 
