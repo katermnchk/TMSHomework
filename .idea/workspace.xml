@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697e6977-2c6c-4ba7-998b-5035903554d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MyMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task1/Accountant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task1/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task1/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task1/Printable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task1/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task2/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task2/Figure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task2/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task2/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SystemUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/Task5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson1/TaskSpecial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +59,7 @@
     "Application.TaskSpecial.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "lesson9",
+    "git-widget-placeholder": "lesson10",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -118,5 +104,8 @@
       <updated>1722616752887</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TMSHomework$MyMain.ic" NAME="MyMain Coverage Results" MODIFIED="1725179040087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
