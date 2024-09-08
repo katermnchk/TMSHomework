@@ -48,7 +48,10 @@ public class Calculator extends JFrame {
                         break;
                     case '/':
                         if (currentNumber == 0) {
-                            throw new ArithmeticException("Division by zero");
+                            JOptionPane.showMessageDialog(null, "Cannot divide by zero!",
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+                                    result = 0;
+                            break;
                         }
                         result /= currentNumber;
                         break;
