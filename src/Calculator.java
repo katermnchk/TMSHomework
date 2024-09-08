@@ -25,17 +25,23 @@ public class Calculator extends JFrame {
         double result = 0;
         double currentNumber = 0;
         char operation = '+';
+        boolean hasDecimal = false; //for checking is digit integer or double
+        double decimalFactor = 0.1;
 
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
 
             //if digit
             if (Character.isDigit(c)) {
-                currentNumber = currentNumber * 10 + (c - '0');
-            }
-
-            //if operator or the end
-            if (!Character.isDigit(c) || i == expression.length() - 1) {
+                if (!hasDecimal) {
+                    currentNumber = currentNumber * 10 + (c - '0');
+                } else {
+                    currentNumber += (c - '0') * decimalFactor;
+                    decimalFactor /= 10;
+                }
+            } else if (c == '.') {
+                hasDecimal = true;
+            } else { //if operator or the end
                 switch (operation) {
                     case '+':
                         result += currentNumber;
@@ -50,8 +56,7 @@ public class Calculator extends JFrame {
                         if (currentNumber == 0) {
                             JOptionPane.showMessageDialog(null, "Cannot divide by zero!",
                                     "Error", JOptionPane.ERROR_MESSAGE);
-                                    result = 0;
-                            break;
+                            return 0;
                         }
                         result /= currentNumber;
                         break;
@@ -62,11 +67,35 @@ public class Calculator extends JFrame {
 
                 operation = c;
                 currentNumber = 0;
+                hasDecimal = false;
+                decimalFactor = 0.1;
             }
         }
+        switch (operation) {
+            case '+':
+                result += currentNumber;
+                break;
+            case '-':
+                result -= currentNumber;
+                break;
+            case '*':
+                result *= currentNumber;
+                break;
+            case '/':
+                if (currentNumber == 0) {
+                    JOptionPane.showMessageDialog(null, "Cannot divide by zero!",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                    return 0;
+                }
+                result /= currentNumber;
+                break;
+            case '%':
+                result %= currentNumber;
+                break;
+        }
+
         return result;
     }
-
 
     JPanel setTop(){
         JPanel top = new JPanel();
@@ -97,7 +126,7 @@ public class Calculator extends JFrame {
         //backspace.addActionListener(click);
 
         JButton pow = new JButton("**");
-        pow.addActionListener(click);
+        //pow.addActionListener(click);
 
         JButton minus = new JButton("-");
         minus.addActionListener(click);
@@ -155,7 +184,13 @@ public class Calculator extends JFrame {
         JButton multiply = new JButton("*");
         multiply.addActionListener(click);
         JButton dot = new JButton(".");
-        dot.addActionListener(click);
+        dot.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String currentText = textField.getText();
+                textField.setText(currentText + ".");
+            }
+        });
 
         JButton modus = new JButton("%");
         modus.addActionListener(click);
