@@ -6,7 +6,8 @@ public class MyMain {
         //displayInAscendingOrder(); //second task
        //getBeforeAverageStrings(); // third task(?)
         //getWordWithDifferentLetters(); //fourth task
-        getDoubleSymbols(); //fifth task
+        //getDoubleSymbols(); //fifth task
+        checkPalindrome();// *task
     }
 
     static void getLongestAndShortestStrings() {
@@ -103,6 +104,32 @@ public class MyMain {
         System.out.println("New string: " + doubleString);
     }
 
+    public static void checkPalindrome() {
+        System.out.print("Please write a string: ");
+        String input = getScanner();
+        String[] words = input.split("\\s+");
+        System.out.print("Which word do you want to check? Please write the number of word (from 1): ");
+        int numOfWord = getScannerInt();
+        if (numOfWord < 1 || numOfWord > words.length)
+            System.out.println("Invalid choice");
+        else {
+            if (isPalindrome(words[numOfWord-1])) {
+                System.out.println("A word '" + words[numOfWord-1] + "' is palindrome");
+            }
+            else System.out.println("A word '" + words[numOfWord-1] + "' is not palindrome");
+        }
+    }
+
+    public static boolean isPalindrome(String word) {
+        word = word.toLowerCase();
+        for (int i = 0; i < word.length() / 2; i++) {
+            if (word.charAt(i) != word.charAt(word.length() - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     static String[] writeStrings() {
         System.out.print("Please write the first string: ");
         String str1 = getScanner();
@@ -115,5 +142,9 @@ public class MyMain {
 
     public static String getScanner(){
         return new Scanner(System.in).nextLine();
+    }
+
+    public static int getScannerInt() {
+        return new Scanner(System.in).nextInt();
     }
 }
