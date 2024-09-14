@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="697e6977-2c6c-4ba7-998b-5035903554d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/WrongLoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WrongPasswordException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyMain.java" afterDir="false" />
     </list>
@@ -58,7 +60,7 @@
     "Application.TaskSpecial.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "lesson12",
+    "git-widget-placeholder": "lesson13",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/katar/Downloads/ml-llm-233.15619.7.zip",
     "project.structure.last.edited": "Modules",
@@ -67,6 +69,11 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.MyMain">
     <configuration name="MyMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyMain" />

@@ -1,44 +1,48 @@
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MyMain {
     public static void main(String[] args) {
-        //checkAbbreviation();
-        checkDocument();
+        registration();
     }
 
-    static void checkAbbreviation() {
-        System.out.print("Please enter a string: ");
-        String input = getScanner();
-        String regex = "\\b[A-Z]{2,6}\\b";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(input);
-        while(matcher.find())
-            System.out.println(matcher.group());
+    static void registration() {
+        System.out.print("Please enter your login: ");
+        String login = getScanner();
+        System.out.print("Please enter your password: ");
+        String password = getScanner();
+        System.out.print("Please confirm your password: ");
+        String confirmPassword = getScanner();
+
+        try {
+            boolean isValid = validateCredentials(login, password, confirmPassword);
+            System.out.println("Проверка успешна: " + isValid);
+        } catch (WrongLoginException e) {
+            System.out.println("Ошибка логина: " + e.getMessage());
+        } catch (WrongPasswordException e) {
+            System.out.println("Ошибка пароля: " + e.getMessage());
+        }
     }
 
-    static void checkDocument(){
-        System.out.print("Please enter a text: ");
-        String document = getScanner();
-        String regexNum = "\\b(?:\\d{4}-){2}\\d{2}\\b";
-        Pattern patternNum = Pattern.compile(regexNum);
-        Matcher matcherNum = patternNum.matcher(document);
-        while(matcherNum.find())
-            System.out.println("Number of document: " + matcherNum.group());
-        String regexPhone = "\\+\\(\\d{2}\\)\\d{7}";
-        Pattern patternPhone = Pattern.compile(regexPhone);
-        Matcher matcherPhone = patternPhone.matcher(document);
-        while(matcherPhone.find())
-            System.out.println("Phone: " + matcherPhone.group());
-        String regexEmail = "[A-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}";
-        Pattern patternEmail = Pattern.compile(regexEmail);
-        Matcher matcherEmail = patternEmail.matcher(document);
-        while(matcherEmail.find())
-            System.out.println("Email: " + matcherEmail.group());
+    public static boolean validateCredentials(String login, String password, String confirmPassword)
+            throws WrongLoginException, WrongPasswordException {
+
+        if (login.length() >= 20 || login.contains(" ")) {
+            throw new WrongLoginException("Логин должен быть меньше 20 символов и не содержать пробелов");
+        }
+
+        if (password.length() >= 20 || password.contains(" ") || !password.matches(".*\\d.*")) {
+            throw new WrongPasswordException
+                    ("Пароль должен быть меньше 20 символов, не содержать пробелов и содержать хотя бы одну цифру.");
+        }
+
+        if (!password.equals(confirmPassword)) {
+            throw new WrongPasswordException("Passwords aren't excepted");
+        }
+        return true;
     }
 
-    public static String getScanner(){
-        return new Scanner(System.in).nextLine();
+    static String getScanner() {
+        Scanner input = new Scanner(System.in);
+        return input.nextLine();
     }
 }
