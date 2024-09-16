@@ -15,11 +15,11 @@ public class MyMain {
 
         try {
             boolean isValid = validateCredentials(login, password, confirmPassword);
-            System.out.println("Проверка успешна: " + isValid);
+            System.out.println("Verification successful: " + isValid);
         } catch (WrongLoginException e) {
-            System.out.println("Ошибка логина: " + e.getMessage());
+            System.out.println("Login error: " + e.getMessage());
         } catch (WrongPasswordException e) {
-            System.out.println("Ошибка пароля: " + e.getMessage());
+            System.out.println("Password error: " + e.getMessage());
         }
     }
 
@@ -27,12 +27,12 @@ public class MyMain {
             throws WrongLoginException, WrongPasswordException {
 
         if (login.length() >= 20 || login.contains(" ")) {
-            throw new WrongLoginException("Логин должен быть меньше 20 символов и не содержать пробелов");
+            throw new WrongLoginException("Login must be less than 20 characters and contain no spaces");
         }
 
         if (password.length() >= 20 || password.contains(" ") || !password.matches(".*\\d.*")) {
             throw new WrongPasswordException
-                    ("Пароль должен быть меньше 20 символов, не содержать пробелов и содержать хотя бы одну цифру.");
+                    ("The password must be less than 20 characters, contain no spaces, and contain at least one number");
         }
 
         if (!password.equals(confirmPassword)) {
