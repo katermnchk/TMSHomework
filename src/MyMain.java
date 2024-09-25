@@ -1,71 +1,61 @@
-import java.io.*;
-import java.util.regex.*;
+import java.util.*;
 
 public class MyMain {
     public static void main(String[] args) {
-        try {
-            //task1
-            String longestWord = findLongestWord
-                    ("C:/Users/katar/OneDrive/Рабочий стол/Romeo and Julietta (en).txt");
-            saveWord("C:/Users/katar/OneDrive/Рабочий стол/LongestWord.txt", longestWord);
-            System.out.println("The longest word is written to the new file. This word is: " + longestWord);
-
-            //task2
-            String inputFile = "C:/Users/katar/OneDrive/Рабочий стол/doc_numbers.txt";
-            String validFile = "C:/Users/katar/OneDrive/Рабочий стол/valid_docs.txt";
-            String invalidFile = "C:/Users/katar/OneDrive/Рабочий стол/invalid_docs.txt";
-            validateDocumentNumbers(inputFile, validFile, invalidFile);
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        //removeDublicates();
+        //getAnimals();
+        getStudents();
     }
 
-   public static String findLongestWord(String myFile) throws IOException {
-        String longestWord = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader(myFile))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] words = line.split("\\W+");
-                for (String word : words) {
-                    if (word.length() > longestWord.length()) {
-                        longestWord = word;
-                    }
-                }
+    public static void removeDublicates() {
+        System.out.print("Please enter numbers separated by spaces: ");
+        String input = getScanner();
+
+        String[] numArray = input.split(" ");
+
+        List<String> uniqueNumbers = new ArrayList<>();
+        for (int i = 0; i < numArray.length; i++) {
+            numArray[i] = numArray[i].trim();
+
+            if(!uniqueNumbers.contains(numArray[i])) {
+                uniqueNumbers.add(numArray[i]);
             }
         }
-       return longestWord;
-   }
+        System.out.println("Result: " + String.join(", ", uniqueNumbers));
+    }
 
-   public static void saveWord(String newFile, String word) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(newFile))) {
-            writer.write("The longest word of Romeo and Julletta is: " + word);
-        }
-   }
+    public static void getAnimals() {
+        Animals animals = new Animals();
 
-   public static void validateDocumentNumbers(String inputFile, String validFile, String invalidFile) throws IOException
-   {
-       try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-            BufferedWriter validWriter = new BufferedWriter(new FileWriter(validFile));
-            BufferedWriter invalidWriter = new BufferedWriter(new FileWriter(invalidFile))) {
+        animals.addAmimal("Tiger");
+        animals.addAmimal("Cat");
+        animals.addAmimal("Dog");
+        animals.addAmimal("Lion");
 
-           String line;
-           while ((line = reader.readLine()) != null) {
-               line = line.trim();
-               if (isValidDocumentNumber(line)) {
-                   validWriter.write(line);
-                   validWriter.newLine();
-               } else {
-                   invalidWriter.write(line);
-                   invalidWriter.newLine();
-               }
-           }
-           System.out.println("Documents were checked");
-       }
-   }
+        System.out.println();
+        animals.printAnimals();
+        System.out.println();
+        animals.deleteAnimal();
+        animals.deleteAnimal();
+        System.out.println();
+        animals.printAnimals();
+    }
 
-   public static boolean isValidDocumentNumber(String line) {
-        Pattern vallidPattern = Pattern.compile("^(docnum|contract)[a-zA-Z0-9]{9}$");
-        return line.length() == 15 && vallidPattern.matcher(line).matches();
-   }
+    public static void getStudents() {
+        List<Student> students = new LinkedList<>();
 
+        students.add(new Student("Kate", "377901", 3,  new LinkedList<>(List.of(9, 9, 8))));
+        students.add(new Student("Senya", "418101", 1, new LinkedList<>(List.of(10, 10, 10, 10))));
+        students.add(new Student("Ivan", "12345", 1, new LinkedList<>(List.of(7, 8, 9))));
+        students.add(new Student("Masha", "4343", 1, new LinkedList<>(List.of(2, 3, 3))));
+
+        Student.printStudents(students, 1);
+        Student.checkStudentsMarks(students);
+        System.out.println();
+        Student.printStudents(students, 2);
+    }
+
+    public static String getScanner(){
+        return new Scanner(System.in).nextLine();
+    }
 }
