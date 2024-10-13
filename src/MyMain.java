@@ -1,58 +1,94 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Stack;
 
 public class MyMain {
     public static void main(String[] args) {
-        //removeDublicates();
-        //getAnimals();
-        getStudents();
+        //getTask1();
+        //getTask2();
+        getSpecialTask();
     }
 
-    public static void removeDublicates() {
-        System.out.print("Please enter numbers separated by spaces: ");
-        String input = getScanner();
+    static void getTask1() {
+        String[] input1 = {"a", "b", "a", "c", "b"};
+        String[] input2 = {"c", "b", "a"};
+        String[] input3 = {"c", "c", "c", "c"};
+        System.out.println(wordMultiple(input1));
+        System.out.println(wordMultiple(input2));
+        System.out.println(wordMultiple(input3));
+    }
 
-        String[] numArray = input.split(" ");
+    public static Map<String, Boolean> wordMultiple(String[] words) {
+        Map<String, Integer> myMap = new HashMap<>();
+        Map<String, Boolean> resultMap = new HashMap<>();
+        for (String word : words) {
+            myMap.put(word, myMap.getOrDefault(word, 0) + 1);
+        }
 
-        List<String> uniqueNumbers = new ArrayList<>();
-        for (int i = 0; i < numArray.length; i++) {
-            numArray[i] = numArray[i].trim();
+        for (String word : myMap.keySet()) {
+            resultMap.put(word, myMap.get(word) >= 2);
+        }
+        return resultMap;
+    }
 
-            if(!uniqueNumbers.contains(numArray[i])) {
-                uniqueNumbers.add(numArray[i]);
+    static void getTask2() {
+        String[] input1 = {"code", "bug"};
+        String[] input2 = {"man", "moon", "main"};
+        String[] input3 = {"man", "moon", "good", "night"};
+        System.out.println(pairs(input1));
+        System.out.println(pairs(input2));
+        System.out.println(pairs(input3));
+    }
+
+    public static Map<String, String> pairs(String[] words) {
+        Map<String, String> resultMap = new HashMap<>();
+        for (String word : words) {
+            String firstSymbol = String.valueOf(word.charAt(0));
+            String lastSymbol = String.valueOf(word.charAt(word.length()-1));
+            resultMap.put(firstSymbol, lastSymbol);
+        }
+        return resultMap;
+    }
+
+    static void getSpecialTask() {
+        String[] test = {"()",
+                "[()]",
+                "{[()]}",
+                "([{{[(())]}}])",
+                "{{[]()}}}}",
+                "{[(])}"};
+        for (String testing : test) {
+            if (checkForBalance(testing)) {
+                System.out.println(testing + " is balanced");
+            }
+            else System.out.println(testing + " is not balanced");
+        }
+    }
+
+    static boolean checkForBalance(String str) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char n : str.toCharArray()) {
+            if (n == '(' || n == '{' || n == '[') {
+                stack.push(n);
+            }
+            else if (n == ')' || n == '}' || n == ']') {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                if (!isPair(stack.pop(), n)) {
+                    return false;
+                }
             }
         }
-        System.out.println("Result: " + String.join(", ", uniqueNumbers));
+        return stack.isEmpty();
     }
 
-    public static void getAnimals() {
-        Animals animals = new Animals();
-
-        animals.addAmimal("Tiger");
-        animals.addAmimal("Cat");
-        animals.addAmimal("Dog");
-        animals.addAmimal("Lion");
-
-        System.out.println();
-        animals.printAnimals();
-        System.out.println();
-        animals.deleteAnimal();
-        animals.deleteAnimal();
-        System.out.println();
-        animals.printAnimals();
-    }
-
-    public static void getStudents() {
-        List<Student> students = new LinkedList<>();
-
-        students.add(new Student("Kate", "377901", 3,  new LinkedList<>(List.of(9, 9, 8))));
-        students.add(new Student("Senya", "418101", 1, new LinkedList<>(List.of(10, 10, 10, 10))));
-        students.add(new Student("Ivan", "12345", 1, new LinkedList<>(List.of(7, 8, 9))));
-        students.add(new Student("Masha", "4343", 1, new LinkedList<>(List.of(2, 3, 3))));
-
-        Student.printStudents(students, 1);
-        Student.checkStudentsMarks(students);
-        System.out.println();
-        Student.printStudents(students, 2);
+    static boolean isPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+                (open == '{' && close == '}') ||
+                (open == '[' && close == ']');
     }
 
     public static String getScanner(){
