@@ -7,6 +7,7 @@ public class MyMain {
         switch (choice) {
             case 1: getTask1();
             case 2: getTask2();
+            case 3: getTask3();
         }
     }
 
@@ -36,6 +37,15 @@ public class MyMain {
         insertionSortThread.start();
         selectionSortThread.start();
         bubbleSortThread.start();
+    }
+
+    public static void getTask3() {
+        Store store = new Store();
+        Thread producerThread = new Thread(new Producer(store));
+        Thread consumerThread = new Thread(new Consumer(store));
+
+        producerThread.start();
+        consumerThread.start();
     }
 
     public static int[] getArray() {
