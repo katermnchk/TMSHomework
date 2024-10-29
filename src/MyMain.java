@@ -1,42 +1,60 @@
-import java.util.*;
-import java.util.stream.Collectors;
-
+import java.util.Scanner;
 
 public class MyMain {
     public static void main(String[] args) {
-        //getTask1();
-        getTask2();
-
+        System.out.print("What task do you want to do?(enter 1, 2 or 3): ");
+        int choice = getScanner();
+        switch (choice) {
+            case 1: getTask1();
+            case 2: getTask2();
+        }
     }
 
     static void getTask1() {
-        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 1, 2, 5, 6, 6, 14, 14, 14, 35, 36, 37, 37));
-        int res = numbers.stream().distinct().filter(n -> n %2 == 0).mapToInt(Integer::intValue).sum();
-        System.out.println(numbers);
-        System.out.println(numbers.stream().distinct().toList());
-        System.out.println(numbers.stream().distinct().filter(n -> n %2 == 0).toList());
-        System.out.println("Sum = " + res);
+        int[] array = getArray();
+
+        Thread maxThread = new ThreadMax(array);
+        Thread minThread = new ThreadMin(array);
+        maxThread.start();
+        minThread.start();
+
+        try {
+            maxThread.join();
+            minThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     static void getTask2() {
-        Map<Integer, String> idName = new HashMap<>();
-        idName.put(1, "Katya");
-        idName.put(2, "Senya");
-        idName.put(3, "Ilya");
-        idName.put(5, "Anya");
-        idName.put(7, "Nastya");
-        idName.put(9, "Alesya");
-        idName.put(13, "Ivan");
+        int[] array = getArray();
 
-        List<String> names = idName.entrySet().stream().filter(n -> Arrays.asList(1,2,5,8,13).contains(n.getKey())).
-                map(Map.Entry::getValue).filter(n -> n.length() % 2 != 0).
-                map(n -> new StringBuilder(n).reverse().toString()).toList();
-        System.out.println(idName);
-        System.out.println(idName.entrySet().stream().filter(n -> Arrays.asList(1,2,5,8,13).
-                contains(n.getKey())).toList());
-        System.out.println(idName.entrySet().stream().filter(n -> Arrays.asList(1,2,5,8,13).contains(n.getKey())).
-                map(Map.Entry::getValue).filter(n -> n.length() % 2 != 0).toList());
-        System.out.println("\nResult: " + names);
+        Thread insertionSortThread = new InsertionSortThread(array);
+        Thread selectionSortThread = new SelectionSortTreads(array);
+        Thread bubbleSortThread = new BubbleSortThread(array);
+
+        insertionSortThread.start();
+        selectionSortThread.start();
+        bubbleSortThread.start();
     }
 
+    public static int[] getArray() {
+        System.out.print("Please enter size of the array: ");
+        int size = getScanner();
+        int[] array = new int[size];
+
+        System.out.println("Please enter elements of the array");
+        for (int i = 0; i <  size; i++) {
+            System.out.print("el[" + i + "]: ");
+            array[i] = getScanner();
+        }
+        return array;
+    }
+
+    public static int getScanner() {
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
+    }
 }
+
+
